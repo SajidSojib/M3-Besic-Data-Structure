@@ -23,7 +23,9 @@ const counter = (amount) => {
  */
 
 class Counter {
-  count = 0;
+  constructor(count = 0) {
+    this.count = count;
+  }
   add(amount) {
     this.count += amount;
   }
@@ -37,7 +39,7 @@ counter2.add(3);
 // counter2.print();   //? output is 5
 
 
-//* Closer
+//* Clouser
 /**
  * here function can be stateful
  * only possible with javascript
@@ -50,7 +52,7 @@ const  createCounter =() => {
     return count;
   }
 }
-const counter3 = createCounter();
+const counter3 = createCounter();   //? counter3 only has access to inner function
 // console.log(counter3(2));   //? output is 2
 // console.log(counter3(3));   //? output is 5
 
